@@ -52,3 +52,17 @@ until about 500 AD.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070206-2
++ Revision: 751494
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070206-1
++ Revision: 718346
+- texlive-epiolmec
+- texlive-epiolmec
+- texlive-epiolmec
+- texlive-epiolmec
+
