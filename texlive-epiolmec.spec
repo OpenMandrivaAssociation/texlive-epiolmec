@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-epiolmec
 Version:	20070206
-Release:	8
+Release:	9
 Summary:	Typesetting the Epi-Olmec Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/epiolmec
