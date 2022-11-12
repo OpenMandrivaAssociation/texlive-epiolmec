@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /language/epiolmec
-# catalog-date 2007-02-06 22:00:42 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-epiolmec
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Typesetting the Epi-Olmec Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/epiolmec
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ Olmec ``documents'', a script used in Southern Middle America
 until about 500 AD.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,11 @@ until about 500 AD.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070206-2
-+ Revision: 751494
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070206-1
-+ Revision: 718346
-- texlive-epiolmec
-- texlive-epiolmec
-- texlive-epiolmec
-- texlive-epiolmec
-
