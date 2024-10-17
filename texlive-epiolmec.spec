@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Typesetting the Epi-Olmec Language
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/epiolmec
+URL:		https://www.ctan.org/tex-archive/language/epiolmec
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epiolmec.doc.r%{version}.tar.xz
